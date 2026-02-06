@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>with love</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 100%;
+        }
+        .nav{
+            width: 100%;
+            height: 50px;
+            background-color: pink;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+        }
+        .items{
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+        }
+        .item
+        {
+            height: 400px;
+            width: 500px;
+            background-color: bisque;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 3px 3px 13px black;
+            
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .item img{
+             height: 200px;
+            width: 200px;
+            padding: 10px;
+            box-shadow: 3px 3px 3px pink,inset 3px 3px 3px pink;
+
+        }.main{
+            display: flex;
+            flex-direction: column;
+        }
+        .scroll
+        {
+            width: 200px;
+            height: 100px;
+            background-color: darkgoldenrod;
+            animation-name: nanii ;
+            animation-duration: 4s;
+            animation-direction:alternate-reverse;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-delay: 0s;
+            position:relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            color:aliceblue;
+            font-size: 25px;
+        }
+       @keyframes nanii{
+        from{
+            top:0;
+            left:0;
+        }
+        to{
+            top: 0;
+          left: 1500px;
+        }}
+        .acccept{
+            width: 800px;
+            height: 100px;
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 10px;
+            gap: 10px;
+            padding-top: 5px;
+            box-shadow: 3px 3px 13px black;
+        }
+        .acccept p{
+            color: white;
+            font-size: 1.2rem;
+            text-shadow: 3px 3px 13px pink;}
+        .footer{
+            display: flex;
+            justify-content: center;
+        }
+        .accept2{
+            display: flex;
+            gap: 10px;
+        }
+        #butt:hover{
+            animation:ok 1s linear infinite;
+            
+        }
+        @keyframes ok{
+            0%{
+                transform: translateX(0);
+                
+            }
+            25%{
+                transform: translateX(500px);
+            }
+
+            }
+        button{
+            width: 70px;
+            height: 30px;
+            background-color: lightblue;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        #accepted:hover{
+            animation: bg 1s infinite linear;
+        }
+        @keyframes bg{
+            from{
+                .container{
+                    background-color:yellow;
+                }
+            }
+            to{
+                .container{
+                    background-color: pink;
+                }
+            }
+        }
+#h11{
+    text-shadow: 3px 3px 13px yellow;
+    color: red;
+}
+    </style>
+    <script>
+       function accept(){
+        alert("I LOVE U TOO BABY ");
+       }
+    </script>
+</head>
+<body class="body">
+    <div class="container">
+          
+        <div class="header">
+            <div class="nav">
+                <div class="feel">
+                    <h1 id="h11">To MY LOVE &hearts; &hearts;</h1>
+                </div>
+                <div>
+                   <h1><a href="download.jpeg">Click Here</a></h1> 
+                </div>
+
+            </div>
+
+        </div>
+        <div class="main">
+            <div class="items">
+                <div class="item"><img src="n.jpeg" alt=""></div>
+                <div class="item"><img src="n2.jpeg" alt=""></div>
+                <div class="item"><img src="i.jpeg" alt=""></div>
+                <div class="item"><img src="a.jpeg" alt=""></div>
+            </div>
+            <div class="scroll">
+                <p>I LOVE UUUUU &hearts;</p>
+            </div>
+          
+        </div>
+        <div class="footer">
+            <div class="acccept">
+                <p><b>&hearts;IN A WORLD FULL OF TEMPORARY THINGS UR MY FOREVER &diamond;&diamondsuit;&smile;</b></p>
+                <P><B>BEING WITH YOU MAKES EVERY ORDINARY MOMENT FEEL MAGICAL &hearts;</B></P>
+                <div class="accept2">
+                    <button id="accepted" onclick="accept()">ok</button>
+                <button id="butt">not ok</button>
+
+                </div>
+            </div>
+
+            
+            </div>
+        </div>
+    
+</body>
+</html>
