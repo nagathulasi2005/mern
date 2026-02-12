@@ -1,0 +1,380 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+.container{
+     height: 100%;
+    width: 100%;
+
+
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    background-color: bisque;
+    align-items: center;
+    padding-left:10px ;
+    padding-right: 10px;
+}
+.menu a{
+    text-decoration: none;
+    padding-right: 20px;
+    color: black;
+}
+.button{
+    background-color: blue;
+    color: aliceblue;
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
+
+}
+.logo{
+    display: flex;
+}
+.logo img{
+    width: 40px;
+    height: 40px;
+} */
+:root{
+    --primary-color:rgb(141, 141, 245);
+    --accent-color:rgb(0, 174, 255);
+    --text-color:black;
+    --link-color:blue;
+    --background-color:white;
+    --lightgray:rgb(209, 206, 206);
+    --gray:gray;
+    --darkgray:rgb(66, 66, 66);
+    
+
+}
+*{
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+    text-decoration: none;
+}
+body{
+    height: 100vh;
+    text-align: center;
+    background-color: var(--background-color);
+    padding: 2rem;
+}
+.header-content{
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.logoicon{
+    height:4rem;
+    width:4rem;
+}
+
+.nav{
+    display:none;
+    gap:1.5rem;
+    
+}
+@media (min-width:768px){
+    .nav{
+        display:flex;
+    }
+   
+}
+
+.nav-link{
+    color:gray;
+    font-weight: 600;
+    transition: color 0.1s;
+}
+.nav-link:hover{
+    color: var(--link-color);
+}
+.contact{
+    border: none;
+    border-radius: 0.375rem;
+    background-color: var(--primary-color);
+    color: var(--background-color)
+    ;
+    transform: all 0.3s;
+    padding:7px;
+    font-weight: 600;
+    display: none;
+}
+@media (min-width:768px) {
+     .contact{
+        display:block;
+    }
+    
+}
+.contact:hover{
+    background-color: rgb(80, 11, 145);
+}
+.menu-button{
+ display: none;
+}
+.menu-icon{
+    height:1.5rem;
+    width:4rem
+}
+.menu-icon:hover{
+    background-color:yellow;
+}
+@media (max-width:768px) {
+.menu-button{
+    display: block;
+}    
+ 
+}
+.main-section{
+    display: flex;
+    max-width: 1280px;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 0;
+}
+.content-left{
+    align-items: center;
+    animation: slidefromleft 1s ease forwards;
+    opacity: 0;
+}
+@keyframes slidefromleft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
+
+.section-label{
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--primary-color)
+    ;
+
+}
+.section-title{
+    font-size: 2.25rem;
+    color: var(--text-color);
+padding: 1.1rem;
+}
+.section-desc{
+    color: var(--gray);
+    font-size: 1.12rem;
+}
+.startbutton,.endbutton{
+     border: none;
+    border-radius: 0.375rem;
+    background-color: var(--primary-color);
+    color: var(--background-color)
+    ;
+    transform: all 0.3s;
+    padding:7px;
+    font-weight: 600;
+
+}
+.buttongroup{
+    display: flex;
+    gap:2rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.endbutton{
+    background-color: var(--darkgray);
+}
+.startbutton:hover{
+    background-color: blue;
+}
+.endbutton:hover{
+    background-color: darkgray;
+}
+.content-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-con{
+    border-radius: 0.675rem;
+    height: 57vh;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0px 4px 8px rgb(68, 68, 68);
+}
+.img-section{
+    height: 100%;
+    width: 100%;
+}
+@media (min-width:768px)
+{
+    .main-section{
+        display: flex;
+        flex-direction: row;
+    }
+    .content-left{
+        max-width: 50%;
+        text-align: left;
+    }
+    .section-title{
+        padding-left: 0;
+
+    }
+    .buttongroup{
+        justify-content: start;
+        padding-left: 0;
+    }
+    .section-label{
+        font-size: 1rem;
+    }
+    .section-title{
+        font-size: 2.5rem;
+    }
+   
+
+}
+.company-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top:2rem ;
+animation: slidefromleft 1s ease forwards;
+margin-bottom: 2rem;}
+.companygrid{
+    display: grid;
+    gap: 3rem;
+    padding: 1rem;
+    background-color: var(--lightgray);
+    border-radius: 0.625rem;
+    border: none;
+    margin-top: 2rem;
+    padding: 1.8rem 2rem;
+    grid-template-columns: repeat(2,1fr);
+
+}
+.mini{
+    height:1.8rem;
+    width: 1.8rem;
+}
+.companylogo{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--darkgray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+@media (min-width:768px) {
+    .companygrid{
+            grid-template-columns: repeat(4,1fr);
+
+    }
+    
+}
+.features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightgray);
+}
+.sub-features{
+    max-width:1280px ;
+}
+.box{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2,1fr);
+    padding: 2rem;
+   
+    
+
+}
+.cardimg{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.boxes{
+   border: none;
+   border-radius: 1.5rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 5rem;
+    box-shadow: 1px 2px 3px black;
+    transition: all 1s ease;
+
+}
+.features-content{
+    margin-bottom: 2rem;
+    margin-top: 2rem ;
+    padding: 1rem;
+}
+.fe-title{
+    margin-bottom: 2rem;
+}
+.fe-desc{
+    font-size: 1.2rem;
+    color: var(--gray);
+}
+.icon-con{
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.first{
+    background-color: pink;
+}
+.second{
+    background-color:skyblue;
+}
+.third{
+    background-color:lightgreen;
+}
+.fourth{
+    background-color:lightsalmon;
+}
+.fifth{
+    background-color:rgb(240, 174, 150);
+}
+.sixth{
+    background-color:rgb(240, 240, 144);
+}
+@media (max-width:510px) {
+    .box{
+        grid-template-columns: repeat(1,1fr);
+        padding: 2rem;
+    }
+    
+}
+.boxes:hover
+{
+    transform: scale(1.05);
+
+}
